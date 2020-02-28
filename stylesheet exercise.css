@@ -1,16 +1,115 @@
-h1, h2, h3, h4, h5 (
-	font_family: 'Times New Roman', 'Helvetica', sans-serif;
-)
+body {
+	background-color: whitesmoke;  /*changes the entire background color*/
+	margin: 0, 5%;
+	margin-top: 2;
 
-h1 (
-	font_size: 3em;
-)
+} 
 
-h2 (
-	font_size: 1.5em;
-)
+#research{
+	background-color: lightblue;
+} /*changes background color of the research section*/
 
-p (
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Times New Roman', 'Helvetica', sans-serif;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+p, li {
 	font-family: 'Leto';
-	font_size: 1em;
-)
+	font-size: 1em;
+}
+
+a {
+	color: #4F4F2F;
+}
+
+a:hover, a:visited {
+	color: #4F2F2F;
+	/*you want the change to be sutle when you hover over the link*/
+}
+
+a:active {
+	font-weight: bold;
+}
+
+img#headshot {
+	max-width: 30%;
+	max-height: 275px;
+	float: right;
+	margin: 20px;
+	border-radius: 20%
+	background-color: inherit;
+}
+
+div.leftcol {
+	float: left;
+	width: 50%;
+	clear: both;
+}
+
+div.rightcol {
+	float: right;
+	width: 50%;
+	clear: right;
+}
+
+hr {
+	clear: both;
+}
+
+#course-title {
+	color: #4f6f4f;
+	background-color: lightyellow;
+	font-weight: bold;
+}
+
+/*flexbox*/
+ul#contact-info {
+	display:flex;
+	list-style: none;  /*gets rid of the bullet points*/
+	width: 100%;
+	align-items: center;
+	justify-content: center; /*the position of the element in each flexbox, i.e. all to the left, all in the middle*/
+	background-color: inherit;
+	flex-direction: row;
+}
+
+#contact_info li {
+	width: 20%;
+	margin: 2.5%;
+}
+
+.fasm .fab{
+	font-szie: 3em;
+}
+
+@media screen and (max-width: 800px) {
+	div.leftcol, div.righcol {
+		float : none;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	ul#contact-info {
+		flex-direction: column;
+	}
+
+	img#headshot {
+		float: none;
+		martin:0 auto;
+		display: block;
+	}
+
+	h1,h2,h3,h4 {
+		text-align: center;
+	}
+}
